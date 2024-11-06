@@ -1,0 +1,452 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: black;
+    margin-bottom: 20px;
+}
+
+/* Header styling */
+.logo-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: #111;
+    border-bottom: 2px solid gray;
+}
+
+.logo {
+    height: 70px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    border: 1px solid transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    color: #888;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li:hover {
+    color: #fff;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #111;
+}
+
+.active {
+    border-color: white;
+    color: white;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+}
+
+/* Company name styling */
+.company-name {
+    text-align: center;
+    font-size: 75px;
+    margin: 20px 0;
+    color: white;
+}
+
+.company-banner {
+    text-align: center;
+    padding: 20px;
+    margin-bottom: -100px;
+}
+
+.banner-icon {
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+}
+
+/* Intro Section Styling */
+.intro {
+    position: relative;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    color: #fff;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+#intro {
+    background-color: #111;
+    color: #fff;
+    min-height: 100vh;
+}
+
+#intro h2 {
+    color: #fff;
+}
+
+#intro p {
+    color: #999;
+}
+
+/* What We Do Section Styling */
+.what-we-do {
+    background-color: #0d8392;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.what-we-do-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 40px;
+    justify-items: center;
+}
+
+.what-we-do-item {
+    max-width: 500px;
+}
+
+.what-we-do-item h3 {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.what-we-do-item p {
+    color: #e0e0e0;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Login Section Styling */
+.login-section {
+    background: linear-gradient(to right, rgba(13, 131, 146, 0.7), rgba(13, 131, 146, 0.9)), url('images/login-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #111;
+}
+
+.login-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.login-form input::placeholder {
+    color: #888;
+}
+
+.login-form button {
+    padding: 15px 20px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-form button:hover {
+    background-color: #007bff;
+}
+
+.signup-link {
+    color: #00bfff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* Section styling */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.centered-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.centered-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.centered-list li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Button Styling */
+.btn {
+    width: 10px;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-login:hover {
+    background-color: #555;
+}
+
+button.btn {
+    width: 25%;
+    padding: 20px;
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #007bff;
+}
+
+/* Footer styling */
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #00bfff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.mailto-button {
+    padding: 10px 20px;
+    background-color: #00bfff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.mailto-button:hover {
+    background-color: #007bff;
+}
+
+.footer-content h2 {
+    margin: 20px 0;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* Signup Section Styling */
+.signup-section {
+    background: linear-gradient(to right, rgba(13, 131, 146, 0.7), rgba(13, 131, 146, 0.9)), url('images/signup-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.signup-content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.signup-form input::placeholder {
+    color: #888;
+}
+
+.signup-form button {
+    padding: 15px 20px;
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.signup-form button:hover {
+    background-color: #007bff;
+}
+
+/* Sales Form */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.sales-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 75%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .sales-form {
+        padding: 20px;
+    }
+
+    /* Reduce width for small devices */
+    input, select, textarea {
+        width: 100%;
+    }
+
+    .intro-content, .what-we-do-content {
+        width: 90%;
+    }
+
+    .what-we-do-content {
+        grid-template-columns: 1fr;
+    }
+
+    button.btn {
+        width: 100%;
+    }
+
+    .logo-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .logo {
+        height: 50px;
+    }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Projection</title>
+    <!-- Load static files -->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'projection_app/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'projection_app/css/dashboard.css' %}">
+</head>
+<body>
+    <header>
+        <div class="logo-nav">
+            <img src="{% static 'projection_app/images/newlogo.png' %}" alt="Quantitative Solutions Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#intro">This is the Sales Projection Tool</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="{% static 'projection_app/images/icons/facebook-icon.png' %}" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="{% static 'projection_app/images/icons/twitter-icon.png' %}" alt="Twitter" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h1>Sales Projection Tool</h1>
+        
+        <!-- Sales Form -->
+        <section id="form-section">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- Display Graph and Results if Available -->
+        {% if graph %}
+            <section id="results-section">
+                <h2>Projection Results</h2>
+                <p><strong>Trend:</strong> {{ trend }}</p>
+                
+                <!-- Display Projected Sales List if Available -->
+                {% if future_sales_list %}
+                    <h3>Projected Sales</h3>
+                    <ul>
+                        {% for period, sale in future_sales_list %}
+                            <li><strong>{{ period }}:</strong> {{ sale }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                
+                <!-- Display Graph -->
+                <div class="graph-container">
+                    <img src="data:image/png;base64,{{ graph }}" alt="Sales Projection Graph">
+                </div>
+                
+                <!-- Download Button (Commented Out) -->
+                <!-- Uncomment if you have a download URL setup --> 
+                <form action="{% url 'download_image' %}" method="get">
+                    <button type="submit" class="btn">Download Image (PNG)</button>
+                </form> 
+            
+            </section>
+        {% endif %}
+    </main>
+</body>
+</html>
